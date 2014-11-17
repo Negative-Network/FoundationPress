@@ -15,6 +15,11 @@ if (!function_exists('FoundationPress_scripts')) :
     wp_enqueue_script('modernizr');
     wp_enqueue_script('jquery');
     wp_enqueue_script('foundation');
+    
+    if (getenv('WP_ENV') == 'development')
+    {
+	wp_enqueue_script('init-livereload', get_template_directory_uri() . '/js/init-livereload.js', array('jquery'), false, true);
+    }
 
   }
 
