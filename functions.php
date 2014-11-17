@@ -29,4 +29,7 @@ require_once('library/enqueue-scripts.php');
 // Add theme support
 require_once('library/theme-support.php');
 
+// Add Unyson framework
+require dirname(__FILE__) .'/framework/bootstrap.php';
+
 ?>
