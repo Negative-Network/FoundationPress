@@ -239,16 +239,17 @@
     background-position:0px -64px;
 }
 
-.bx-sliders .content-container{
+.bx-sliders .bx-content-container{
     margin:40px 0px 0px 5px;
     z-index: 99;
     color:white; 
 }
 
-.content-inner{
+.bx-content-inner{
     padding:40px; 
     z-index: 99;
     width: auto;
     height: auto;
     overflow: hidden;
+    /*display: none;*/
 }
