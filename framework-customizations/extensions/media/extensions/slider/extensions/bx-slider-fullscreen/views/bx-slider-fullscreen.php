@@ -4,7 +4,8 @@
 ?>
 <?php if (isset($data['slides'])):
 
-	print_r($data);
+	// fw_print(fw_get_db_post_option($data['settings']['post_id']));
+	// fw_print($data);
 
 	?>
 	<script type="text/javascript">
