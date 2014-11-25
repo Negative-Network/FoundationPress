@@ -20,7 +20,7 @@
 						        ];
 						        var index = 0;
 						        var transitionSpeed = 500;
-						        var imageIntervals = 5000;
+						        var imageIntervals = 8000;
 						        var startIntervals;
 						        var intervalSetTime;
 								var contentOpen = false;
@@ -32,6 +32,8 @@
 								    slider = jQuery('#bxslider-fullscreen').bxSlider({
 									mode: 'fade',
 									controls: true,
+									nextText: '',
+									prevText: '',
 									pager: true,
 									pause: imageIntervals,
 									onSlideBefore : function($slideElement, oldIndex, newIndex){
@@ -99,23 +101,39 @@
 						    <div id="indicator"></div>
 
 						    <div id="bxslider-fullscreen" class="bx-sliders">
-	<?php
-	$i = 0;
-	foreach ($data['slides'] as $slide):
-	?>
+								<?php
+								$i = 0;
+								foreach ($data['slides'] as $slide):
+								?>
 							    <div class="bx-content-container">
-								<div class="bx-content-inner" id="bx-content-<?php echo $i;?>">
-	<?php echo isset($data['settings']['post_id']) ? '<a href="' . post_permalink($data['settings']['post_id']) . '">Link</a>' : '';?>
-								    <h2><?php echo $slide['title'];?></h2>
-								    <div class="desc">
-	<?php echo $slide['desc'];?>
-	</div>
-						</div>
+									<div class="bx-content-inner" id="bx-content-<?php echo $i;?>">
+										<?php  
+										if(isset($slide['post_id']))
+										{
+											$category = '';
+											foreach(get_the_terms($slide['post_id'],'fw-portfolio-category') as $category) { 
+												switch($category->slug) 
+												{
+													case 'carnets-de-voyage': $category = 'le carnet';break;
+													case 'dessins': $category =  'le dessin';break;
+													case 'huiles': $category =  'l\'huile';break;
+													default: $category =  $category->name;break;
+												}; 
+											} 
+
+											echo '<a href="' . post_permalink($slide['post_id']) . '"><h2>'.$slide['title'].' <span class="date">'.get_the_time('Y',$slide['post_id']).'</span></h2><span class="link">Voir '.$category.'</span></a>';
+
+										} 
+										else {
+											echo '<h2>'.$slide['title'].'</h2>';
+										}
+										?>
+									</div>
 							    </div>
-	<?php
-	$i++;
-	endforeach;
-	?>
-	</div>
+								<?php
+								$i++;
+								endforeach;
+								?>
+							</div>
 
 	<?php endif;?>
