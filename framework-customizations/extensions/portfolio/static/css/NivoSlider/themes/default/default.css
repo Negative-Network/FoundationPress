@@ -52,10 +52,11 @@ Supports Thumbs: true
 	text-indent:-9999px;
 	border:0;
 	opacity: 0;
-	-webkit-transition: all 200ms ease-in-out;
+/*	-webkit-transition: all 200ms ease-in-out;
 	-moz-transition: all 200ms ease-in-out;
 	-o-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;*/
+	opacity: 1;
 }
 .theme-default:hover .nivo-directionNav a { opacity: 1; }
 .theme-default a.nivo-nextNav {

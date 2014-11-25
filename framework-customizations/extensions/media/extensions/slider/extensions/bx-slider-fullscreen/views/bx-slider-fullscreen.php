@@ -44,11 +44,13 @@
 								    jQuery(function () {
 										jQuery.preload(images, {
 										    init: function (loaded, total) {
-											//    		    jQuery("#indicator").html("<img src='<?php echo get_template_directory_uri()?>images/load.gif' />");
+											   		    jQuery("#indicator").html("<img src='<?php echo get_template_directory_uri()?>images/load.gif' />");
 										    },
 										    loaded_all: function (loaded, total) {
 
-											jQuery('div.bx-wrapper').css('margin-top',jQuery(window).height()/4);
+										    	console.log(jQuery(window).height());
+										    if(jQuery(window).height()>450)
+												jQuery('div.bx-wrapper').css('margin-top',jQuery(window).height()/4);
 
 											// jQuery('.content-container').show();
 											jQuery('#indicator').fadeOut('slow', function () {
@@ -69,6 +71,8 @@
 										    }
 										});
 								    });
+
+									$('body').css('overflow','hidden');
 
 						        });
 
@@ -94,6 +98,7 @@
 							startIntervals();
 							contentOpen = false;
 						};
+
 
 						    </script>
 
