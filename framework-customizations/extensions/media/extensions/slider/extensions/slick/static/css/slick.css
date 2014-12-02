@@ -225,8 +225,7 @@
       position: relative;
       width: 100%;
       text-align: center;
-      /* height:0px; */
-      height: 100%; }
+      height: auto; }
       .in-slide-content .wrapper .inside-nav a {
         margin: 0 auto;
         display: inline-block; }
