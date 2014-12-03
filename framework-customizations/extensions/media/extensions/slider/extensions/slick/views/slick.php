@@ -96,36 +96,16 @@
 	  echo '<img data-lazy="'.$slide['src'].'" alt="" class="slider-images"/>';
 	  echo '</div>';
 
-	  echo '<div class="in-slide-content ">';
-	  echo '<div class="wrapper">';
-	  echo '<div class="cell">';
-	  echo '<div class="inside-nav">';
-	  if(isset($slide['post_id']))
-	  {
-	      $category = '';
-	      foreach(get_the_terms($slide['post_id'],'fw-portfolio-category') as $category) {
-		  switch($category->slug)
-		  {
-		      case 'carnets-de-voyage': $category = 'le carnet';break;
-		      case 'dessins': $category =  'le dessin';break;
-		      case 'huiles': $category =  'l\'huile';break;
-		      default: $category =  $category->name;break;
-		  };
-	      }
-	      echo '<a href="' . post_permalink($slide['post_id']) . '"><h2>'.$slide['title'].' - <span class="date">'.get_the_time('Y',$slide['post_id']).'</span></h2><span class="link">Voir '.$category.'</span></a>';
-
-	  }
-	  else {
+	  echo '<div class="in-slide">';
+	  echo '<div class="in-slide-wrap">';
+	  echo '<div class="in-slide-inner-wrap">';
+	  echo '<div class="in-slide-content">';
 	      echo '<h2>'.$slide['title'].'</h2>';
-	  }
-
-
-
 	  echo '</div>';
 	  echo '</div>';
 	  echo '</div>';
 	  echo '</div>';
-
+	  
 	  echo '</div>';
 	  echo '</div>';
 

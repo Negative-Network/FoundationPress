@@ -302,7 +302,7 @@ $opacity-not-active: .25;
 
 $slide-content-top:0;
 $slide-content-bottom:0;
-.in-slide-content {
+.in-slide {
     width:100%;
     position:absolute;
     margin: auto;
@@ -312,17 +312,17 @@ $slide-content-bottom:0;
     overflow:auto;
     z-index:9999;
 
-    .wrapper{
+    .in-slide-wrap{
     	display: table;
     	height:100%;
             width:100%;
 
-    	div.cell {
+    	div.in-slide-inner-wrap {
     	    display: table-cell;
     	    vertical-align: middle;
     	    width:100%;
     	}
-    	.inside-nav{
+    	.in-slide-content{
             -webkit-backface-visibility: hidden;
     	    background-color: transparent;
     	    position: relative;
