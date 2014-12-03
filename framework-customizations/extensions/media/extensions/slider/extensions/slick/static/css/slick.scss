@@ -192,10 +192,10 @@ $opacity-not-active: .25;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-    left: -25px;
+    left: 10px;
     [dir="rtl"] & {
         left:  auto;
-        right: -25px;
+        right: 10px;
     }
     &:before {
         content: $slick-prev-character;
@@ -205,9 +205,9 @@ $opacity-not-active: .25;
     }
 }
 .slick-next {
-    right: -25px;
+    right: 10px;
     [dir="rtl"] & {
-        left:  -25px;
+        left:  10px;
         right: auto;
     }
     &:before {
