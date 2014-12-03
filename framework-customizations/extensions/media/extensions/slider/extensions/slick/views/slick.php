@@ -112,7 +112,7 @@
 		      default: $category =  $category->name;break;
 		  };
 	      }
-	      echo '<a href="' . post_permalink($slide['post_id']) . '"><h2>'.$slide['title'].' <span class="date">'.get_the_time('Y',$slide['post_id']).'</span></h2><span class="link">Voir '.$category.'</span></a>';
+	      echo '<a href="' . post_permalink($slide['post_id']) . '"><h2>'.$slide['title'].' - <span class="date">'.get_the_time('Y',$slide['post_id']).'</span></h2><span class="link">Voir '.$category.'</span></a>';
 
 	  }
 	  else {
