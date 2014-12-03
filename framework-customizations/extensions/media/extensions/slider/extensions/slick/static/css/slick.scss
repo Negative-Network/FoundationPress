@@ -313,26 +313,27 @@ $slide-content-bottom:0;
     z-index:9999;
 
     .wrapper{
-	display: table;
-	height:100%;
-        width:100%;
+    	display: table;
+    	height:100%;
+            width:100%;
 
-	div.cell {
-	    display: table-cell;
-	    vertical-align: middle;
-	    width:100%;
-	}
-	.inside-nav{
-	    background-color: transparent;
-	    position: relative;
-	    width: 100%;
-	    text-align:center;
-	    height:auto;
-	    a{
-		margin:0 auto;
-		display:inline-block;
-	    }
-	}
+    	div.cell {
+    	    display: table-cell;
+    	    vertical-align: middle;
+    	    width:100%;
+    	}
+    	.inside-nav{
+            -webkit-backface-visibility: hidden;
+    	    background-color: transparent;
+    	    position: relative;
+    	    width: 100%;
+    	    text-align:center;
+    	    height:auto;
+    	    a{
+    		margin:0 auto;
+    		display:inline-block;
+    	    }
+    	}
     }
 }
 
