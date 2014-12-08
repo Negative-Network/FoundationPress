@@ -87,8 +87,19 @@
     <div id="slick-home" class="slick">
       <?php
       $i = 0;
+      
       foreach ($data['slides'] as $slide){
-	  $meta = wp_get_attachment_metadata(get_post_thumbnail_id($slide['post_id']));
+	  if (isset($slide['multimedia_type']))
+	  {
+	      if ($slide['multimedia_type'] == 'image') //it's an image
+	      {
+		  $meta = wp_get_attachment_metadata($slide['post_id']);
+	      }
+	      else{ //it's a video
+		  break;
+	      }
+	  }
+	  else $meta = wp_get_attachment_metadata(get_post_thumbnail_id($slide['post_id'])); //it's a post (Category)
 	  echo '<div class="fullscreen">';
 	  echo  '<div class="info-slider focuspoint" data-focus-x="0" data-focus-y="0" data-image-w="'.$meta["width"].'" data-image-h="'.$meta["height"].'" >';
 
