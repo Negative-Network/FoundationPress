@@ -88,8 +88,8 @@ class FW_Option_Type_Fullwidth_Section extends FW_Option_Type_Layout_Builder_Ite
 		return array(
 			array(
 				'tab' => __('Layout Elements', 'fw'),
-				'title' => __('Row', 'fw'),
-				'description' => __('Creates a row', 'fw'),
+				'title' => __('Section', 'fw'),
+				'description' => __('Creates a section', 'fw'),
 			)
 		);
 	}

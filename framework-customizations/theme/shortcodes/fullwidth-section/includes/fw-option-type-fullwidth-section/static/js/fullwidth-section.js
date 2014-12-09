@@ -9,7 +9,7 @@
 
 				if (options.modalOptions) {
 					this.modal = new fw.OptionsModal({
-						title: 'Row',
+						title: 'Section',
 						options: options.modalOptions,
 						values: this.model.get('optionValues'),
 						size: 'medium'
@@ -24,7 +24,7 @@
 				'<div class="lb-item-type-column lb-item custom-section">' +
 					'<div class="panel fw-row">' +
 					'<div class="panel-left fw-col-xs-6">' +
-					'<div class="column-title">Row</div>' +
+					'<div class="column-title">Section</div>' +
 					'</div>' +
 					'<div class="panel-right fw-col-xs-6">' +
 					'<div class="controls">' +
