@@ -1,5 +1,8 @@
 <?php
 
+
+if (!function_exists('FoundationPress_navs')) :
+
 /**
  * Register Menus
  * http://codex.wordpress.org/Function_Reference/register_nav_menus#Examples
@@ -10,6 +13,9 @@ register_nav_menus(array(
     'mobile-off-canvas' => 'Mobile',
     'footer-menu' => 'Footer',
 ));
+
+
+endif;
 
 
 /**
