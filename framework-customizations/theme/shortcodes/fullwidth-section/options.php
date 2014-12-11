@@ -8,7 +8,16 @@ $options = array(
 		'label' => __('Full Width', 'unyson'),
 		'desc' => __('Should the row be full width?', 'unyson'),
 		'choices' => array(//	in future may will set predefined images
-		)
+		),
+	),
+	'font-color' => array(
+		'type' => 'select',
+		'label' => __('Font Color', 'unyson'),
+		'desc' => __('Dark or Light font color?', 'unyson'),
+		'choices' => array(
+			'light' => __('Light', 'fw'),
+			'dark' => __('Dark', 'fw'),
+		),
 	),
 	'background-color' => array(
 		'type' => 'color-picker',
@@ -20,11 +29,11 @@ $options = array(
 		'label' => __('Background Image', 'unyson'),
 		'desc' => __('Please select the background image', 'unyson'),
 		'choices' => array(//	in future may will set predefined images
-		)
+		),
 	),
 	'video' => array(
-		'type'  => 'text',
+		'type' => 'text',
 		'label' => __('Background Video', 'fw'),
-		'desc'  => __('Insert Video URL to embed this video', 'fw'),
-	)
+		'desc' => __('Insert Video URL to embed this video', 'fw'),
+	),
 );
