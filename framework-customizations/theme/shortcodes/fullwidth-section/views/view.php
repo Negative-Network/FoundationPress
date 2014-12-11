@@ -4,6 +4,8 @@ $bg_video_class = '';
 $font_color = empty($atts['option_values']['font-color']) ? '' : $atts['option_values']['font-color'] . '-font';
 $bg_color = empty($atts['option_values']['background-color']) ? '' : 'background-color:' . $atts['option_values']['background-color'] . ';';
 $bg_image = empty($atts['option_values']['background-image']) ? '' : 'background-image:url(' . $atts['option_values']['background-image']['data']['icon'] . ');';
+$css_id = empty($atts['option_values']['css-id']) ? '' : 'id="' . $atts['option_values']['css-id'] . '"';
+$css_classes = empty($atts['option_values']['css-classes']) ? '' : $atts['option_values']['css-classes'];
 
 $row = empty($atts['option_values']['section-row']) ? 'row' : '';
 ?>
@@ -19,8 +21,12 @@ $bg_video_class = 'wallpapered';
     </script>
 <?php endif;?>
 
-    <div class="fullwidth-section <?php echo $bg_video_class;echo $font_color;?>"
-	 style="<?php echo $bg_color?> <?php echo $bg_image?>" <?php echo $bg_video?>>
+<div
+class="fullwidth-section <?php echo $bg_video_class;echo $font_color;echo $css_classes;?>"
+style="<?php echo $bg_color?> <?php echo $bg_image?>"
+<?php echo $bg_video?>
+<?php echo $css_id?>
+>
 
 
 <?php echo ($row != '') ? '<div class="row">' : '';?>

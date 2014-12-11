@@ -36,4 +36,14 @@ $options = array(
 		'label' => __('Background Video', 'fw'),
 		'desc' => __('Insert Video URL to embed this video', 'fw'),
 	),
+	'css-id' => array(
+		'type' => 'text',
+		'label' => __('HTML ID', 'fw'),
+		'desc' => __('For anchors, CSS or Javascript', 'fw'),
+	),
+	'css-class' => array(
+		'type' => 'text',
+		'label' => __('CSS classes', 'fw'),
+		'desc' => __('CSS classes for styling. Classes must be separated with spaces', 'fw'),
+	),
 );
