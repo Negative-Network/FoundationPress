@@ -8,6 +8,15 @@
     // padding: 10px !important;
 }
 
+.column-1-6 {
+    @media #{$medium-up} {
+        @include grid-column(4,$float:left,$collapse:true);
+    }
+    @media #{$large-up} {
+        @include grid-column(2,$float:left,$collapse:true);
+    }
+}
+
 .column-1-4 {
     @media #{$medium-up} {
         @include grid-column(6,$float:left,$collapse:true);
