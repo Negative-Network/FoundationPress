@@ -46,8 +46,9 @@
     }
 }
 .column-1-1 {
+    @include grid-column(12,$float:left, $collapse:true);
     @media #{$medium-up} {
-        @include grid-column(12,$float:left);
+        @include grid-column(12,$float:left, $collapse:true);
     }
 }
 
