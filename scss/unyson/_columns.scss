@@ -51,8 +51,14 @@
         @include grid-column(12,$float:left, $collapse:true);
     }
 }
-
+[class^="column-"], [class*="column-"]{
+        height:100%;
+}
 .fullwidth-section {
     overflow:hidden;
     // padding: 10px !important;
+}
+.row,
+.fw-row{
+    height:100%;
 }
