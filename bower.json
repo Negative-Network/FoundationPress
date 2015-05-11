@@ -1,6 +1,12 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "foundationpress",
+  "main": [
+    "css/foundation.css",
+    "js/foundation.js"
+  ],
+  "ignore": [],
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "fontawesome": "~4.3.0"
   }
 }

@@ -7,7 +7,7 @@ get_header(); ?>
 	<div class="small-12 large-12 columns" role="main">
 
 	<?php /* Start loop */ ?>
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -197,7 +197,7 @@ get_header(); ?>
 			<hr>
 			<h4 id="flex-video">Flex Video</h4>
 			<div class="flex-video">
-				<iframe width="420" height="315" src="http://www.youtube.com/embed/0_EW8aNgKlA" frameborder="0" allowfullscreen></iframe>
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/s4m5wwM4BWM" frameborder="0" allowfullscreen></iframe>
 			</div>
 
 			<hr>
@@ -398,45 +398,36 @@ get_header(); ?>
 
 			<hr>
 			<h4 id="accordion">Accordion</h4>
-			<dl class="accordion" data-accordion>
-				<dd>
-					<a href="#panel1">Accordion 1</a>
-					<div id="panel1" class="content active">
-						<dl class="tabs" data-tab>
-							<dd class="active"><a href="#panel1-1">Tab 1</a></dd>
-							<dd><a href="#panel1-2">Tab 2</a></dd>
-							<dd><a href="#panel1-3">Tab 3</a></dd>
-							<dd><a href="#panel1-4">Tab 4</a></dd>
-						</dl>
-						<div class="tabs-content">
-							<div class="content active" id="panel1-1">
-								<p>First panel content goes here...</p>
-							</div>
-							<div class="content" id="panel1-2">
-								<p>Second panel content goes here...</p>
-							</div>
-							<div class="content" id="panel1-3">
-								<p>Third panel content goes here...</p>
-							</div>
-							<div class="content" id="panel1-4">
-								<p>Fourth panel content goes here...</p>
-							</div>
-						</div>
-					</div>
-				</dd>
-				<dd>
-					<a href="#panel2">Accordion 2</a>
-					<div id="panel2" class="content">
-						Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</div>
-				</dd>
-				<dd>
-					<a href="#panel3">Accordion 3</a>
-					<div id="panel3" class="content">
-						Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</div>
-				</dd>
-			</dl>
+			<ul class="accordion" data-accordion="">
+  <li class="accordion-navigation active">
+    <a href="#panel1a">Accordion 1</a>
+    <div id="panel1a" class="content active">
+      <ul class="small-block-grid-2 large-block-grid-3 ">
+        <li><img src="http://placehold.it/350x150"></li>
+        <li><img src="http://placehold.it/350x150"></li>
+        <li><img src="http://placehold.it/350x150"></li>
+      </ul>
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel2a">Accordion 2</a>
+    <div id="panel2a" class="content">
+      <div class="row">
+        <div class="small-6 columns">
+          <p>Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="small-6 columns">
+        <img src="http://placehold.it/350x150">
+      </div>
+    </div>
+  </div></li>
+  <li class="accordion-navigation">
+    <a href="#panel3a">Accordion 3</a>
+    <div id="panel3a" class="content">
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+</ul>
 
 			<hr>
 			<h4 id="tabs">Tabs</h4>
@@ -615,23 +606,23 @@ get_header(); ?>
 			<h4 id="icon-bar">Icon bar</h4>
 			<div class="icon-bar five-up" role="navigation"> 
 			  <a class="item" role="button" tabindex="0" aria-label="home"> 
-			    <i class="fi-home"></i> 
+			    <i class="fa fa-home"></i> 
 			    <label id="home">Home</label>
 			  </a> 
 			  <a class="item" role="button" tabindex="0" aria-label="Bookmark"> 
-			    <i class="fi-bookmark"></i> 
+			    <i class="fa fa-fw fa-bookmark"></i> 
 			    <label id="bookmark">Bookmark</label>
 			  </a> 
 			  <a class="item" role="button" tabindex="0" aria-label="Information"> 
-			    <i class="fi-info"></i> 
+			    <i class="fa fa-fw fa-info-circle"></i> 
 			    <label id="information">Information</label>
 			  </a> 
 			  <a class="item" role="button" tabindex="0" aria-label="Mail"> 
-			    <i class="fi-mail"></i> 
+			    <i class="fa fa-fw fa-envelope"></i> 
 			    <label id="mail">Mail</label>
 			  </a> 
 			  <a class="item" role="button" tabindex="0" aria-label="Like"> 
-			    <i class="fi-like"></i> 
+			    <i class="fa fa-fw fa-thumbs-up"></i> 
 			    <label id="like">Like</label>
 			  </a> 
 			</div>
@@ -711,14 +702,14 @@ get_header(); ?>
 			<h5 id="screen-size-visibility-control-hide-">Screen Size Visibility Control (Hide)</h5>
 			<p>The following text should describe the screen size you aren&#39;t using:</p>
 			<p class="panel">
-				<strong class="hide-for-small">You are <em>not</em> on a small screen.</strong>
-				<strong class="hide-for-medium">You are <em>not</em> on a medium screen.</strong>
-				<strong class="hide-for-medium-up">You are <em>not</em> on a medium, large or xlarge screen.</strong>
-				<strong class="hide-for-medium-down">You are <em>not</em> on a medium or small screen.</strong>
-				<strong class="hide-for-large">You are <em>not</em> on a large screen.</strong>
-				<strong class="hide-for-large-up">You are <em>not</em> on a large or xlarge screen.</strong>
-				<strong class="hide-for-large-down">You are <em>not</em> on a large, medium or small screen.</strong>
-				<strong class="hide-for-xlarge">You are <em>not</em> on a xlarge screen.</strong>
+				<strong class="hide-for-small-only">You are <em>not</em> on a small screen.</strong>
+				<strong class="hide-for-medium-up">You are <em>not</em> on a medium, large, xlarge, or xxlarge screen.</strong>
+				<strong class="hide-for-medium-only">You are <em>not</em> on a medium screen.</strong>
+				<strong class="hide-for-large-up">You are <em>not</em> on a large, xlarge, or xxlarge screen.</strong>
+				<strong class="hide-for-large-only">You are <em>not</em> on a large screen.</strong>
+				<strong class="hide-for-xlarge-up">You are <em>not</em> on an xlarge screen and up.</strong>
+				<strong class="hide-for-xlarge-only">You are <em>not</em> on an xlarge screen.</strong>
+				<strong class="hide-for-xxlarge-up">You are <em>not</em> on an xxlarge screen.</strong>
 			</p>
 
 			<h5 id="orientation-detection">Orientation Detection</h5>
@@ -736,7 +727,7 @@ get_header(); ?>
 			</p>
 
 			<footer>
-				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )); ?>
+				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
 			<?php comments_template(); ?>
